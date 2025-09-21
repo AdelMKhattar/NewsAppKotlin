@@ -20,17 +20,21 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.navigation.compose.rememberNavController
 import com.example.simplefactapp.presentation.common.NewsButton
 import com.example.simplefactapp.presentation.common.TextNewsButton
 import com.example.simplefactapp.presentation.onboarding.Dimensions.mediumPadding2
 import com.example.simplefactapp.presentation.onboarding.Dimensions.pageIndicatorWidth
 import com.example.simplefactapp.presentation.onboarding.componants.OnBoardingPage
 import com.example.simplefactapp.presentation.onboarding.componants.PageIndicator
+import com.example.simplefactapp.ui.theme.NewsAppTheme
 import kotlinx.coroutines.launch
 import java.nio.file.WatchEvent
 
 @Composable
-fun OnBoardingScreen() {
+fun OnBoardingScreen(
+    event: (OnBoardingEvent) -> Unit
+) {
     Column(modifier = Modifier.fillMaxSize()) {
         //Track the current page & handle scroll position, offset, and animations.
         val pagerState = rememberPagerState(initialPage = 0) {
@@ -83,7 +87,8 @@ fun OnBoardingScreen() {
                 NewsButton(buttonState.value[1], onClick = {
                     scope.launch {
                         if (pagerState.currentPage == 2) {
-                            //TODO: NAVIGATE TO HOME SCREEN
+                            event(OnBoardingEvent.SaveAppEntry)
+
                         } else {
                             pagerState.animateScrollToPage(page = pagerState.currentPage + 1)
                         }

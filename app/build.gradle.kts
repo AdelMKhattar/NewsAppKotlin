@@ -2,6 +2,9 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id("com.google.dagger.hilt.android")
+    id ("kotlin-kapt")
+
 }
 
 android {
@@ -49,6 +52,7 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.datastore.core)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -59,4 +63,14 @@ dependencies {
 
     //Splash Screen
     implementation("androidx.core:core-splashscreen:1.0.0")
+
+    // DataStore allows you to store key-value pairs or typed objects with protocol buffers.
+    implementation("androidx.datastore:datastore-preferences:1.1.7")
+
+    //Dagger hilt dependency injection
+    implementation ("com.google.dagger:hilt-android:2.57.1")
+    kapt("com.google.dagger:hilt-compiler:2.57.1")
+    implementation("androidx.hilt:hilt-navigation-compose:1.3.0")
+    val nav_version = "2.9.4"
+    implementation("androidx.navigation:navigation-compose:$nav_version")
 }
