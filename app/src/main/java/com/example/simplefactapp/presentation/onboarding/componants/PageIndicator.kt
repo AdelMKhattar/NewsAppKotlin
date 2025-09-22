@@ -12,7 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import com.example.simplefactapp.presentation.onboarding.Dimensions.IndicatorSize
+import com.example.simplefactapp.presentation.Dimensions.IndicatorSize
 import com.example.simplefactapp.ui.theme.BlueGray
 
 

@@ -18,7 +18,7 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.simplefactapp.presentation.onboarding.Dimensions
+import com.example.simplefactapp.presentation.Dimensions
 import com.example.simplefactapp.presentation.onboarding.Page
 import com.example.simplefactapp.presentation.onboarding.pages
 import com.example.simplefactapp.ui.theme.NewsAppTheme

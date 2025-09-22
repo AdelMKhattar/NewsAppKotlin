@@ -23,8 +23,8 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.rememberNavController
 import com.example.simplefactapp.presentation.common.NewsButton
 import com.example.simplefactapp.presentation.common.TextNewsButton
-import com.example.simplefactapp.presentation.onboarding.Dimensions.mediumPadding2
-import com.example.simplefactapp.presentation.onboarding.Dimensions.pageIndicatorWidth
+import com.example.simplefactapp.presentation.Dimensions.mediumPadding2
+import com.example.simplefactapp.presentation.Dimensions.pageIndicatorWidth
 import com.example.simplefactapp.presentation.onboarding.componants.OnBoardingPage
 import com.example.simplefactapp.presentation.onboarding.componants.PageIndicator
 import com.example.simplefactapp.ui.theme.NewsAppTheme
